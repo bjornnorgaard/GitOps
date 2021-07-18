@@ -17,7 +17,7 @@ resource "scaleway_k8s_cluster" "captain" {
   name    = "captain"
   version = "1.21.1"
   cni     = "cilium"
-  tags = [ "gitops", "testing" ]
+  tags    = ["gitops", "testing"]
 }
 
 resource "scaleway_k8s_pool" "crew" {
@@ -29,5 +29,5 @@ resource "scaleway_k8s_pool" "crew" {
   autohealing = true
   min_size    = 1
   max_size    = 3
-  tags = [ "gitops", "testing" ]
+  tags        = ["gitops", "testing"]
 }
