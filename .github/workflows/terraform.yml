@@ -40,6 +40,9 @@ jobs:
     - name: Terraform Format
       run: terraform fmt -check
 
+    - name: Check dir
+      run: pwd
+
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan
