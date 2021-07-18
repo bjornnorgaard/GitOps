@@ -24,10 +24,10 @@ resource "scaleway_k8s_pool" "crew" {
   cluster_id  = scaleway_k8s_cluster.captain.id
   name        = "crew"
   node_type   = "DEV1-M"
-  size        = 1
+  size        = 2
   autoscaling = true
   autohealing = true
-  min_size    = 1
+  min_size    = 2
   max_size    = 3
   tags        = ["gitops", "testing"]
 }
