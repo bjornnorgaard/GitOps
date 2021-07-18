@@ -25,9 +25,6 @@ resource "scaleway_k8s_pool" "crew" {
   name        = "crew"
   node_type   = "DEV1-M"
   size        = 2
-  autoscaling = true
   autohealing = true
-  min_size    = 2
-  max_size    = 3
   tags        = ["gitops", "testing"]
 }
