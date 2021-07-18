@@ -1,2 +1,5 @@
-/terraform @bjornnorgaard
-/kubernetes @bjornnorgaard
+# *             @global-owner1 @global-owner2
+
+/.github/       @bjornnorgaard
+/kubernetes/    @bjornnorgaard
+/kubernetes/    @bjornnorgaard
