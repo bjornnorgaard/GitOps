@@ -42,9 +42,9 @@ jobs:
     - name: Terraform Plan
       run: terraform plan
 
-    - name: Terraform Apply
-      env:
-        SCW_ACCESS_KEY: ${{ secrets.SCW_ACCESS_KEY }}
-        SCW_SECRET_KEY: ${{ secrets.SCW_SECRET_KEY }}        
-      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      run: terraform apply -auto-approve
+#   - name: Terraform Apply
+#     env:
+#        SCW_ACCESS_KEY: ${{ secrets.SCW_ACCESS_KEY }}
+#        SCW_SECRET_KEY: ${{ secrets.SCW_SECRET_KEY }}        
+#      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+#      run: terraform apply -auto-approve
