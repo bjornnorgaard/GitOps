@@ -4,13 +4,13 @@ terraform {
       source  = "scaleway/scaleway"
       version = "2.1.0"
     }
+  }
 
-    backend "remote" {
-      organization = "softwarebybear"
+  backend "remote" {
+    organization = "softwarebybear"
 
-      workspaces {
-        name = "GitOps"
-      }
+    workspaces {
+      name = "GitOps"
     }
   }
 }
