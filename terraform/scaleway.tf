@@ -7,10 +7,11 @@ terraform {
   }
 
   backend "remote" {
-  organization = "softwarebybear"
+    organization = "softwarebybear"
 
-  workspaces {
-    name = "GitOps"
+    workspaces {
+      name = "GitOps"
+    }
   }
 }
 
