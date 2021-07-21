@@ -5,6 +5,13 @@ terraform {
       version = "2.1.0"
     }
   }
+
+  backend "remote" {
+  organization = "softwarebybear"
+
+  workspaces {
+    name = "GitOps"
+  }
 }
 
 provider "scaleway" {
