@@ -26,6 +26,9 @@ resource "scaleway_k8s_cluster" "captain" {
   version = "1.21.1"
   cni     = "cilium"
   tags    = ["gitops", "testing"]
+  auto_upgrade {
+    enable = true
+  }
 }
 
 resource "scaleway_k8s_pool" "crew" {
