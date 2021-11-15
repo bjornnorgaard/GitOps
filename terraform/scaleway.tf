@@ -23,12 +23,12 @@ provider "scaleway" {
 
 resource "scaleway_k8s_cluster" "captain" {
   name    = "captain"
-  version = "1.21.1"
+  version = "1.21"
   cni     = "cilium"
   auto_upgrade {
-    enable                        = true
+    enable                        = true    
     maintenance_window_start_hour = 02
-    maintenance_window_day        = "monday"
+    maintenance_window_day        = "any"
   }
 }
 
