@@ -28,6 +28,8 @@ resource "scaleway_k8s_cluster" "captain" {
   tags    = ["gitops", "testing"]
   auto_upgrade {
     enable = true
+    maintenance_window_start_hour = 03
+    maintenance_window_day = "monday"
   }
 }
 
