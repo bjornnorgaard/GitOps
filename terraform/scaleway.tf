@@ -25,7 +25,11 @@ resource "scaleway_k8s_cluster" "captain" {
   name    = "captain"
   version = "1.21.1"
   cni     = "cilium"
-  tags    = ["gitops", "testing"]
+  auto_upgrade {
+    enable                        = true
+    maintenance_window_start_hour = 02
+    maintenance_window_day        = "monday"
+  }
 }
 
 resource "scaleway_k8s_pool" "crew" {
@@ -34,5 +38,4 @@ resource "scaleway_k8s_pool" "crew" {
   node_type   = "DEV1-M"
   size        = 3
   autohealing = true
-  tags        = ["gitops", "testing"]
 }
