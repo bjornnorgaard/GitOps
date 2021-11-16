@@ -6,21 +6,21 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: hello
   namespace: test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: hello
   template:
     metadata:
       labels:
-        app: nginx
+        app: hello
     spec:
       containers:
-        - name: nginx
-          image: nginx
+        - name: hello
+          image: nginxdemos/hello
           resources:
             limits:
               memory: "64Mi"
@@ -31,11 +31,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: hello
   namespace: test
 spec:
   selector:
-    app: nginx
+    app: hello
   ports:
     - port: 80
       targetPort: 80
